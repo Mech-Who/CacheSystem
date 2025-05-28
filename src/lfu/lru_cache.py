@@ -187,6 +187,10 @@ class LFUCache[Key, Value]:
 
 if __name__ == "__main__":
     import random
+    import sys
+
+    logger.remove()
+    logger.add(sink=sys.stdout, level="DEBUG", colorize=True)
 
     class DataNode(object):
         def __init__(self, data: int = -1) -> None:
